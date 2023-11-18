@@ -21,14 +21,15 @@ namespace Assignment_14_11_2023
         }
         public void GoToYahoo()
         {
-            IWebElement googleSearchBox = driver.FindElement(By.Id("APjFqb"));
-            googleSearchBox.SendKeys("yahoo.com");
-            Thread.Sleep(2000);
-            IWebElement gsButton = driver.FindElement(By.Name("btnK"));
-            gsButton.Click();
+            //IWebElement googleSearchBox = driver.FindElement(By.Id("APjFqb"));
+            //googleSearchBox.SendKeys("yahoo.com");
+            //Thread.Sleep(2000);
+            //IWebElement gsButton = driver.FindElement(By.Name("btnK"));
+            //gsButton.Click();
+            driver.Navigate().GoToUrl("https://www.yahoo.com");
             Thread.Sleep(3000);
-            Console.WriteLine("name:", driver.Title);
-            Assert.AreEqual("yahoo.com - Google Search", driver.Title);
+            Console.WriteLine("name:{0}", driver.Title);
+            Assert.AreEqual("Yahoo | Mail, Weather, Search, Politics, News, Finance, Sports & Videos", driver.Title);
             Console.WriteLine("Go To Yahoo -Pass");
         }
         public void BackToGoogle()

@@ -7,28 +7,35 @@ using NUnit.Framework;
 using SeleniumExample;
 
 GHPTests gHPTests=new GHPTests();
+AmazonTests amazonTests=new AmazonTests();
 List<string> list = new List<string>();
-list.Add("Edge");
+//list.Add("Edge");
 list.Add("Chrome");
 foreach (var item in list)
 {
     switch (item)
     {
         case "Edge":
-            gHPTests.InitializeEdgeDriver(); ;
+            amazonTests.InitializeEdgeDriver(); 
             break;
         case "Chrome":
-            gHPTests.InitializeChromeDriver();
+            amazonTests.InitializeChromeDriver();
             break;
     }
     try
     {
-        gHPTests.TitleTest();
+        // gHPTests.TitleTest();
         //gHPTests.PageSourceTest();
-        gHPTests.GSTest();
-        gHPTests.GmaiLinkTest();
-        gHPTests.ImagesLinkTest();
-        gHPTests.LocalizationTest();
+        //gHPTests.GSTest();
+        //gHPTests.GmaiLinkTest();
+        //gHPTests.ImagesLinkTest();
+        //gHPTests.LocalizationTest();
+        //gHPTests.GAppYoyubeTest();
+        //amazonTests.TitleTest(); 
+        //amazonTests.LogoClickedTest();
+        //amazonTests.SearchProductTest();
+        // amazonTests.SignInAccListTest();
+        amazonTests.SearchAndFilterProductByBrandTest();
 
 
     }
@@ -36,6 +43,10 @@ foreach (var item in list)
     {
         Console.WriteLine("Fail");
     }
-}
+    catch(NoSuchElementException ex)
+    {
+        Console.WriteLine(ex.Message);
+    }
+    amazonTests.Destruct();
 
-gHPTests.Destruct();
+}

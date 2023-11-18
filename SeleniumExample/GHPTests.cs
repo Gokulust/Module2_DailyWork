@@ -86,7 +86,15 @@ namespace SeleniumExample
         }
         public void GAppYoyubeTest()
         {
-           
+            Thread.Sleep(1000);
+            IWebElement menuIcon = driver.FindElement(By.CssSelector("a.gb_d"));
+            menuIcon.Click();
+            Thread.Sleep(2000);
+            IWebElement youtubeIcon = driver.FindElement(By.CssSelector("a.tX9u1b"));
+            youtubeIcon.Click();
+            Thread.Sleep(3000);
+            Assert.AreEqual("https://www.youtube.com/", driver.Url);
+            Console.WriteLine("Youtube-Pass");
         }
         public void Destruct()
         {
