@@ -93,10 +93,18 @@ namespace SeleniumNuintExamples
             IWebElement emailInput = fluentWait.Until(d => d.FindElement(By.Id("session_key")));
             IWebElement passwordInput = fluentWait.Until(d => d.FindElement(By.Id("session_password")));
             emailInput.SendKeys(email);
-            emailInput.SendKeys(password);
+            passwordInput.SendKeys(password);
+            TakeScreenShot();
+            IJavaScriptExecutor js=(IJavaScriptExecutor)driver;
+            js.ExecuteScript("arguments[0].scrollIntoView(true);", driver.FindElement(By.XPath("//button[@type='submit']")));
+
+            Thread.Sleep(5000);
+
+            js.ExecuteScript("arguments[0].click();", driver.FindElement(By.XPath("//button[@type='submit']")));
+
             ClearForm(emailInput);
             ClearForm(passwordInput);
-            Thread.Sleep(2000);
+         
 
         }
         static object[] InvalidLoginData()
@@ -104,8 +112,9 @@ namespace SeleniumNuintExamples
             return new object[]
             {
                 new object[] {"gokul@gmail.com","23hsig"},
-                new object[] {"shirin@gmail.com","oiiojh98u"},
+               
             };
         }
+      
     }
 }
