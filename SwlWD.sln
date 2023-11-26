@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignment_19_2023", "Assig
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignment_20_2023", "Assignment_20_2023\Assignment_20_2023.csproj", "{FE530B7B-743A-48C2-89C4-02479F8F2D65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rediff", "Rediff\Rediff.csproj", "{425FD233-B4A4-48AB-829B-95490121818D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rediff", "Rediff\Rediff.csproj", "{425FD233-B4A4-48AB-829B-95490121818D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selenium_Casestudy_24_11_23", "Selenium_Casestudy_24_11_23\Selenium_Casestudy_24_11_23.csproj", "{DB08D277-D4F9-4367-BB58-629CF7CCD391}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{425FD233-B4A4-48AB-829B-95490121818D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{425FD233-B4A4-48AB-829B-95490121818D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{425FD233-B4A4-48AB-829B-95490121818D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB08D277-D4F9-4367-BB58-629CF7CCD391}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB08D277-D4F9-4367-BB58-629CF7CCD391}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB08D277-D4F9-4367-BB58-629CF7CCD391}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB08D277-D4F9-4367-BB58-629CF7CCD391}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
