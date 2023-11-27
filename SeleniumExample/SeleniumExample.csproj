@@ -14,4 +14,8 @@
     <PackageReference Include="Selenium.WebDriver.MSEdgeDriver" Version="119.0.2151.42" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Selenium_Casestudy_24_11_23\Selenium_Casestudy_24_11_23.csproj" />
+  </ItemGroup>
+
 </Project>
