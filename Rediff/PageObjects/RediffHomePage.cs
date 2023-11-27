@@ -28,9 +28,10 @@ namespace Rediff.PageObjects
             CreateAccountLink.Click();
         }
 
-        public void SigInClick()
+        public SigninPage SigInClick()
         {
             SignInLink.Click();
+            return new SigninPage(driver);
         }
         public CreateAccountPage createAccountClick()
         {

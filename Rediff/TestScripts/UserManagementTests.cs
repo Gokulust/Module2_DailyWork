@@ -45,5 +45,26 @@ namespace Rediff.TestScripts
             createAccountpage.CheckAvailabilityButtonClick();
             Thread.Sleep(2000);
         }
+        [Test, Order(2), Category("Regression Testing")]
+        public void SignIn()
+        {
+            var homepage=new RediffHomePage(driver);
+            if (!driver.Url.Equals("https://www.rediff.cpm/"))
+            {
+                driver.Navigate().GoToUrl("https://www.rediff.com/");
+
+            }
+            Thread.Sleep(3000);
+            var siginPage = homepage.SigInClick();
+            siginPage.TypeUserName("gokul");
+            siginPage.TypePasswordText("pass");
+            siginPage.ClickRememberMe();
+            Assert.False(siginPage.RememberMeCheckBox.Selected);
+            Thread.Sleep(2000);
+            siginPage.ClickSignInButton();
+            
+            Thread.Sleep(2000);
+
+        }
     }
 }
